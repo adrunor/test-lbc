@@ -20,4 +20,8 @@ class MusicRepository(private val api: LbcApiClient, private val dao: MusicDao) 
     fun getPlaylist(): Observable<List<Music>> {
         return dao.getAll()
     }
+
+    fun searchMusic(query: String): Observable<List<Music>> {
+        return dao.searchMusic(query)
+    }
 }

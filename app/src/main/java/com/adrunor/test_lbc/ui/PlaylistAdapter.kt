@@ -8,6 +8,7 @@ import com.adrunor.test_lbc.core.model.Music
 
 class PlaylistAdapter : RecyclerView.Adapter<MusicViewHolder>() {
 
+
     private var musicList = listOf<Music>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MusicViewHolder {

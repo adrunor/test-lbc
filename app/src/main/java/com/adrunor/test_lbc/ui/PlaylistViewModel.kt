@@ -21,4 +21,7 @@ class PlaylistViewModel(private val repository: MusicRepository) : ViewModel() {
         return repository.saveAll(playlist)
     }
 
+    fun searchMusic(query: String): Observable<List<Music>> {
+        return repository.searchMusic(query)
+    }
 }

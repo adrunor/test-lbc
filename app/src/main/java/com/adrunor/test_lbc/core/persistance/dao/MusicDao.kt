@@ -17,4 +17,7 @@ interface MusicDao {
 
     @Query("SELECT * FROM music")
     fun getAll(): Observable<List<Music>>
+
+    @Query("SELECT * FROM music WHERE title LIKE :query OR albumId = :query")
+    fun searchMusic(query: String): Observable<List<Music>>
 }
